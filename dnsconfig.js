@@ -1,0 +1,68 @@
+// Providers:
+
+var REG_NONE = NewRegistrar("none"); // No registrar.
+var DSP_DIGITALOCEAN = NewDnsProvider("digitalocean");
+var DSP_TRANSIP = NewDnsProvider("transip");
+
+// Domains:
+
+D(
+  "openstreetmap.be",
+
+  REG_NONE,
+  DnsProvider(DSP_DIGITALOCEAN),
+
+  DefaultTTL(3600),
+
+  A("@", "185.199.108.153"), // GitHub Pages
+  A("@", "185.199.109.153"), // GitHub Pages
+  A("@", "185.199.110.153"), // GitHub Pages
+  A("@", "185.199.111.153"), // GitHub Pages
+
+  A("www", "167.71.2.120"), // Redirect to openstreetmap.be (via tools.osm.be)
+
+  CNAME("tile", "tile.geo6.be.", TTL(43200)),
+
+  TXT("_github-challenge-osmbe", "43d1e54aa1"),
+  TXT("_github-pages-challenge-osmbe", "97d20329e5ae4b3afae295f72515dd")
+);
+
+D(
+  "osm.be",
+
+  REG_NONE,
+  DnsProvider(DSP_DIGITALOCEAN),
+
+  DefaultTTL(3600),
+
+  A("@", "167.71.2.120"), // Redirect to openstreetmap.be (via tools.osm.be)
+
+  CNAME("www", "tools.osm.be.", TTL(43200)), // Redirect to openstreetmap.be (via tools.osm.be)
+
+  A("tools", "167.71.2.120"),
+  A("hiking", "79.99.201.128"),
+
+  CNAME("buildings", "grbosm.site.", TTL(43200)),
+  CNAME("community", "jbelien.github.io.", TTL(43200)),
+  CNAME("crab-import", "aptum.bitless.be.", TTL(43200)),
+  CNAME("cyclofix", "osmbe.github.io.", TTL(43200)),
+  CNAME("icar-import", "aptum.bitless.be.", TTL(43200)),
+  CNAME("mapcomplete", "mapcomplete.github.io.", TTL(43200)),
+  CNAME("members", "tools.osm.be.", TTL(43200)),
+  CNAME("play", "osmbe.github.io.", TTL(43200)),
+  CNAME("report", "jbelien.github.io.", TTL(43200)),
+  CNAME("status", "page.updown.io.", TTL(43200)),
+  CNAME("stripe", "tools.osm.be.", TTL(43200)),
+  CNAME("tile", "tile.geo6.be.", TTL(43200)),
+  CNAME("welcome", "tools.osm.be.", TTL(43200)),
+
+  MX("@", 10, "in1-smtp.messagingengine.com.", TTL(14400)), // Fastmail
+  MX("@", 20, "in2-smtp.messagingengine.com.", TTL(14400)), // Fastmail
+
+  TXT("_github-challenge-osmbe", "0929d6a96c"),
+  TXT("_updown.status", "updown-page=p/le98d"),
+  TXT("_github-pages-challenge-osmbe", "c014dd962f7ee4f0223cfb30c1755c"),
+  TXT("_github-pages-challenge-jbelien.report", "dee80906a3559de895b1763b79cd8d"),
+  TXT("_github-pages-challenge-jbelien.community", "3fbf8f6a3952111acd1fe1f65511a0"),
+  TXT("_github-pages-challenge-mapcomplete.mapcomplete", "abc032979de3caa4ba4743f791c411")
+);
