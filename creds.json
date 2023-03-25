@@ -1,0 +1,13 @@
+{
+  "bind": {
+    "TYPE": "BIND"
+  },
+  "digitalocean": {
+    "TYPE": "DIGITALOCEAN",
+    "token": "$TOKEN_DIGITALOCEAN"
+  },
+  "transip": {
+    "TYPE": "TRANSIP",
+    "AccessToken": "$TOKEN_TRANSIP"
+  }
+}
