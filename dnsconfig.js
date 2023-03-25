@@ -36,10 +36,10 @@ D(
   DefaultTTL(3600),
 
   A("@", "167.71.2.120"), // Redirect to openstreetmap.be (via tools.osm.be)
-
-  CNAME("www", "tools.osm.be.", TTL(43200)), // Redirect to openstreetmap.be (via tools.osm.be)
+  A("www", "167.71.2.120"), // Redirect to openstreetmap.be (via tools.osm.be)
 
   A("tools", "167.71.2.120"),
+
   A("hiking", "79.99.201.128"),
 
   CNAME("buildings", "grbosm.site.", TTL(43200)),
