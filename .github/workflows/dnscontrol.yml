@@ -1,0 +1,42 @@
+name: DNSControl
+
+on:
+  pull_request:
+    branches: [ master ]
+  push:
+    branches: [ master ]
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: DNSControl check
+        uses: koenrh/dnscontrol-action@v3
+        with:
+          args: check
+
+  preview:
+    needs: [check]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: DNSControl preview
+        uses: koenrh/dnscontrol-action@v3
+        env:
+          TOKEN_DIGITALOCEAN: ${{ secrets.TOKEN_DIGITALOCEAN }}
+        with:
+          args: preview
+
+  push:
+    if: github.event_name == 'push'
+    needs: [preview]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: DNSControl push
+        uses: koenrh/dnscontrol-action@v3
+        env:
+          TOKEN_DIGITALOCEAN: ${{ secrets.TOKEN_DIGITALOCEAN }}
+        with:
+          args: push
