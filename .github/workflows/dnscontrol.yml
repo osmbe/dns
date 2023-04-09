@@ -11,22 +11,36 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+      - uses: gacts/install-dnscontrol@v1
       - name: DNSControl check
-        uses: koenrh/dnscontrol-action@v3
-        with:
-          args: check
+        run: dnscontrol check
+
+  check-creds:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        # provider: [digitalocean, transip]
+        provider: [transip]
+    steps:
+      - uses: actions/checkout@v3
+      - uses: gacts/install-dnscontrol@v1
+      - name: DNSControl check-creds
+        run: dnscontrol check-creds ${{ matrix.provider }}
+        env:
+          TOKEN_DIGITALOCEAN: ${{ secrets.TOKEN_DIGITALOCEAN }}
+          TOKEN_TRANSIP: ${{ secrets.TOKEN_TRANSIP }}
 
   preview:
-    needs: [check]
+    needs: [check, check-creds]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+      - uses: gacts/install-dnscontrol@v1
       - name: DNSControl preview
-        uses: koenrh/dnscontrol-action@v3
+        run: dnscontrol preview
         env:
           TOKEN_DIGITALOCEAN: ${{ secrets.TOKEN_DIGITALOCEAN }}
-        with:
-          args: preview
+          TOKEN_TRANSIP: ${{ secrets.TOKEN_TRANSIP }}
 
   push:
     if: github.event_name == 'push'
@@ -38,9 +52,9 @@ jobs:
       cancel-in-progress: true
     steps:
       - uses: actions/checkout@v3
+      - uses: gacts/install-dnscontrol@v1
       - name: DNSControl push
-        uses: koenrh/dnscontrol-action@v3
+        run: dnscontrol push
         env:
           TOKEN_DIGITALOCEAN: ${{ secrets.TOKEN_DIGITALOCEAN }}
-        with:
-          args: push
+          TOKEN_TRANSIP: ${{ secrets.TOKEN_TRANSIP }}
