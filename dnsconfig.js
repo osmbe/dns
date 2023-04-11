@@ -40,6 +40,9 @@ D(
 
   A("tools", "167.71.2.120"),
 
+  CNAME("status", "page.updown.io.", TTL(43200)),
+  TXT("_updown.status", "updown-page=p/le98d"),
+  
   A("hiking", "79.99.201.128"),
 
   CNAME("buildings", "grbosm.site.", TTL(43200)),
@@ -51,7 +54,6 @@ D(
   CNAME("members", "tools.osm.be.", TTL(43200)),
   CNAME("play", "osmbe.github.io.", TTL(43200)),
   CNAME("report", "jbelien.github.io.", TTL(43200)),
-  CNAME("status", "page.updown.io.", TTL(43200)),
   CNAME("stripe", "tools.osm.be.", TTL(43200)),
   CNAME("tile", "tile.geo6.be.", TTL(43200)),
   CNAME("welcome", "tools.osm.be.", TTL(43200)),
@@ -65,7 +67,6 @@ D(
   CNAME("fm3._domainkey", "fm3.osm.be.dkim.fmhosted.com."),
 
   TXT("_github-challenge-osmbe", "0929d6a96c"),
-  TXT("_updown.status", "updown-page=p/le98d"),
   TXT("_github-pages-challenge-osmbe", "c014dd962f7ee4f0223cfb30c1755c"),
   TXT("_github-pages-challenge-jbelien.report", "dee80906a3559de895b1763b79cd8d"),
   TXT("_github-pages-challenge-jbelien.community", "3fbf8f6a3952111acd1fe1f65511a0"),
