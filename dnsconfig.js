@@ -56,8 +56,13 @@ D(
   CNAME("tile", "tile.geo6.be.", TTL(43200)),
   CNAME("welcome", "tools.osm.be.", TTL(43200)),
 
-  MX("@", 10, "in1-smtp.messagingengine.com.", TTL(14400)), // Fastmail
-  MX("@", 20, "in2-smtp.messagingengine.com.", TTL(14400)), // Fastmail
+  // Fastmail - https://www.fastmail.help/hc/en-us/articles/1500000280261
+  MX("@", 10, "in1-smtp.messagingengine.com."),
+  MX("@", 20, "in2-smtp.messagingengine.com."),
+  TXT("@", "v=spf1 include:spf.messagingengine.com include:_spf.google.com ?all"),
+  CNAME("fm1._domainkey", "fm1.osm.be.dkim.fmhosted.com."),
+  CNAME("fm2._domainkey", "fm2.osm.be.dkim.fmhosted.com."),
+  CNAME("fm3._domainkey", "fm3.osm.be.dkim.fmhosted.com."),
 
   TXT("_github-challenge-osmbe", "0929d6a96c"),
   TXT("_updown.status", "updown-page=p/le98d"),
