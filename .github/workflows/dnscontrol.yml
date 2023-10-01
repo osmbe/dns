@@ -10,7 +10,7 @@ jobs:
   check:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - uses: gacts/install-dnscontrol@v1
       - name: DNSControl check
         run: dnscontrol check
@@ -22,7 +22,7 @@ jobs:
         # provider: [digitalocean, transip]
         provider: [transip]
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - uses: gacts/install-dnscontrol@v1
       - name: DNSControl check-creds
         run: dnscontrol check-creds ${{ matrix.provider }}
@@ -34,7 +34,7 @@ jobs:
     needs: [check, check-creds]
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - uses: gacts/install-dnscontrol@v1
       - name: DNSControl preview
         run: dnscontrol preview
@@ -51,7 +51,7 @@ jobs:
       group: dns-push
       cancel-in-progress: true
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - uses: gacts/install-dnscontrol@v1
       - name: DNSControl push
         run: dnscontrol push
