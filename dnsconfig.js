@@ -2,7 +2,6 @@
 
 var REG_NONE = NewRegistrar("none"); // No registrar.
 var DSP_DIGITALOCEAN = NewDnsProvider("digitalocean");
-var DSP_TRANSIP = NewDnsProvider("transip");
 
 // Domains:
 
@@ -42,7 +41,7 @@ D(
 
   CNAME("status", "page.updown.io.", TTL(43200)),
   TXT("_updown.status", "updown-page=p/le98d"),
-  
+
   A("hiking", "79.99.201.128"),
 
   CNAME("buildings", "grbosm.site.", TTL(43200)),
@@ -61,7 +60,7 @@ D(
 
   CNAME("mailing", "docker.osm.be.", TTL(43200)),
   CNAME("new.buildings", "docker.osm.be.", TTL(43200)),
-  
+
   // Fastmail - https://www.fastmail.help/hc/en-us/articles/1500000280261
   MX("@", 10, "in1-smtp.messagingengine.com."),
   MX("@", 20, "in2-smtp.messagingengine.com."),

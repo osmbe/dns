@@ -19,8 +19,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        # provider: [digitalocean, transip]
-        provider: [transip]
+        provider: [digitalocean]
     steps:
       - uses: actions/checkout@v4
       - uses: gacts/install-dnscontrol@v1
@@ -28,7 +27,6 @@ jobs:
         run: dnscontrol check-creds ${{ matrix.provider }}
         env:
           TOKEN_DIGITALOCEAN: ${{ secrets.TOKEN_DIGITALOCEAN }}
-          TOKEN_TRANSIP: ${{ secrets.TOKEN_TRANSIP }}
 
   preview:
     needs: [check, check-creds]
@@ -40,7 +38,6 @@ jobs:
         run: dnscontrol preview
         env:
           TOKEN_DIGITALOCEAN: ${{ secrets.TOKEN_DIGITALOCEAN }}
-          TOKEN_TRANSIP: ${{ secrets.TOKEN_TRANSIP }}
 
   push:
     if: github.event_name == 'push'
@@ -57,4 +54,3 @@ jobs:
         run: dnscontrol push
         env:
           TOKEN_DIGITALOCEAN: ${{ secrets.TOKEN_DIGITALOCEAN }}
-          TOKEN_TRANSIP: ${{ secrets.TOKEN_TRANSIP }}
