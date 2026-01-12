@@ -67,6 +67,7 @@ D(
   CNAME("www", "web.fastmail.com.", TTL(43200)),
 
   CNAME("mailing", "docker.osm.be.", TTL(43200)),
+  CNAME("proxy", "docker.osm.be.", TTL(43200)),
   CNAME("new.buildings", "docker.osm.be.", TTL(43200)),
 
   // Fastmail - https://www.fastmail.help/hc/en-us/articles/1500000280261
