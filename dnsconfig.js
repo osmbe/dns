@@ -18,9 +18,16 @@ D(
   A("@", "185.199.110.153"), // GitHub Pages
   A("@", "185.199.111.153"), // GitHub Pages
 
-  A("www", "167.71.2.120"), // Redirect to openstreetmap.be (via tools.osm.be)
+  CNAME("tile", "tile.osm.be.", TTL(43200)),
+  CNAME("www", "web.fastmail.com.", TTL(43200)),
 
-  CNAME("tile", "tile.geo6.be.", TTL(43200)),
+  // Fastmail - https://www.fastmail.help/hc/en-us/articles/1500000280261
+  MX("@", 10, "in1-smtp.messagingengine.com."),
+  MX("@", 20, "in2-smtp.messagingengine.com."),
+  TXT("@", "v=spf1 include:spf.messagingengine.com ?all"),
+  CNAME("fm1._domainkey", "fm1.openstreetmap.be.dkim.fmhosted.com."),
+  CNAME("fm2._domainkey", "fm2.openstreetmap.be.dkim.fmhosted.com."),
+  CNAME("fm3._domainkey", "fm3.openstreetmap.be.dkim.fmhosted.com."),
 
   TXT("_github-challenge-osmbe", "43d1e54aa1"),
   TXT("_github-pages-challenge-osmbe", "97d20329e5ae4b3afae295f72515dd")
@@ -43,18 +50,19 @@ D(
   TXT("_updown.status", "updown-page=p/le98d"),
 
   A("hiking", "79.99.201.128"),
+  A("tile", "142.93.238.240"),
 
-  CNAME("buildings", "grbosm.site.", TTL(43200)),
+  CNAME("buildings", "grb.byteless.net.", TTL(43200)),
   CNAME("community", "jbelien.github.io.", TTL(43200)),
   CNAME("crab-import", "aptum.bitless.be.", TTL(43200)),
   CNAME("cyclofix", "osmbe.github.io.", TTL(43200)),
+  CNAME("historical", "osmbe.github.io.", TTL(43200)),
   CNAME("icar-import", "aptum.bitless.be.", TTL(43200)),
   CNAME("jekyll", "osmbe.github.io.", TTL(43200)),
   CNAME("mapcomplete", "mapcomplete.github.io.", TTL(43200)),
   CNAME("members", "web.fastmail.com.", TTL(43200)),
   CNAME("play", "osmbe.github.io.", TTL(43200)),
   CNAME("report", "jbelien.github.io.", TTL(43200)),
-  CNAME("tile", "tile.geo6.be.", TTL(43200)),
   CNAME("welcome", "2-x-rai4ihq-b62c5e7ddypzg.fr-3.platformsh.site.", TTL(43200)),
   CNAME("www", "web.fastmail.com.", TTL(43200)),
 
@@ -68,6 +76,8 @@ D(
   CNAME("fm1._domainkey", "fm1.osm.be.dkim.fmhosted.com."),
   CNAME("fm2._domainkey", "fm2.osm.be.dkim.fmhosted.com."),
   CNAME("fm3._domainkey", "fm3.osm.be.dkim.fmhosted.com."),
+  CNAME("k2._domainkey", "dkim2.mcsv.net."),
+  CNAME("k3._domainkey", "dkim3.mcsv.net."),
 
   TXT("_github-challenge-osmbe", "0929d6a96c"),
   TXT("_github-pages-challenge-osmbe", "c014dd962f7ee4f0223cfb30c1755c"),
