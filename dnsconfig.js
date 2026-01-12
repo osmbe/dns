@@ -35,10 +35,10 @@ D(
 
   DefaultTTL(3600),
 
-  A("@", "167.71.2.120"), // Redirect to openstreetmap.be (via tools.osm.be)
-  A("www", "167.71.2.120"), // Redirect to openstreetmap.be (via tools.osm.be)
+  A("@", "103.168.172.37"),
+  A("@", "103.168.172.52"),
 
-  A("tools", "167.71.2.120"),
+  A("docker", "209.38.105.230"),
 
   CNAME("status", "page.updown.io.", TTL(43200)),
   TXT("_updown.status", "updown-page=p/le98d"),
@@ -50,14 +50,18 @@ D(
   CNAME("crab-import", "aptum.bitless.be.", TTL(43200)),
   CNAME("cyclofix", "osmbe.github.io.", TTL(43200)),
   CNAME("icar-import", "aptum.bitless.be.", TTL(43200)),
+  CNAME("jekyll", "osmbe.github.io.", TTL(43200)),
   CNAME("mapcomplete", "mapcomplete.github.io.", TTL(43200)),
-  CNAME("members", "tools.osm.be.", TTL(43200)),
+  CNAME("members", "web.fastmail.com.", TTL(43200)),
   CNAME("play", "osmbe.github.io.", TTL(43200)),
   CNAME("report", "jbelien.github.io.", TTL(43200)),
-  CNAME("stripe", "tools.osm.be.", TTL(43200)),
   CNAME("tile", "tile.geo6.be.", TTL(43200)),
-  CNAME("welcome", "tools.osm.be.", TTL(43200)),
+  CNAME("welcome", "2-x-rai4ihq-b62c5e7ddypzg.fr-3.platformsh.site.", TTL(43200)),
+  CNAME("www", "web.fastmail.com.", TTL(43200)),
 
+  CNAME("mailing", "docker.osm.be.", TTL(43200)),
+  CNAME("new.buildings", "docker.osm.be.", TTL(43200)),
+  
   // Fastmail - https://www.fastmail.help/hc/en-us/articles/1500000280261
   MX("@", 10, "in1-smtp.messagingengine.com."),
   MX("@", 20, "in2-smtp.messagingengine.com."),
