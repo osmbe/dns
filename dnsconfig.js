@@ -44,13 +44,13 @@ D(
   A("@", "103.168.172.37"),
   A("@", "103.168.172.52"),
 
-  A("docker", "209.38.105.230"),
+  A("docker", "146.190.224.8"),
+  A("tile", "142.93.238.240"),
+
+  A("hiking", "79.99.201.128"),
 
   CNAME("status", "page.updown.io.", TTL(43200)),
   TXT("_updown.status", "updown-page=p/le98d"),
-
-  A("hiking", "79.99.201.128"),
-  A("tile", "142.93.238.240"),
 
   CNAME("buildings", "grb.byteless.net.", TTL(43200)),
   CNAME("community", "jbelien.github.io.", TTL(43200)),
