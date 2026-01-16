@@ -60,7 +60,6 @@ D(
   CNAME("icar-import", "aptum.bitless.be.", TTL(43200)),
   CNAME("jekyll", "osmbe.github.io.", TTL(43200)),
   CNAME("mapcomplete", "mapcomplete.github.io.", TTL(43200)),
-  CNAME("members", "web.fastmail.com.", TTL(43200)),
   CNAME("play", "osmbe.github.io.", TTL(43200)),
   CNAME("report", "jbelien.github.io.", TTL(43200)),
   CNAME("welcome", "2-x-rai4ihq-b62c5e7ddypzg.fr-3.platformsh.site.", TTL(43200)),
@@ -70,6 +69,9 @@ D(
   CNAME("new.buildings", "docker.osm.be.", TTL(43200)),
   CNAME("proxy", "docker.osm.be.", TTL(43200)),
   CNAME("uptime", "docker.osm.be.", TTL(43200)),
+
+  // Redirections
+  CNAME("members", "docker.osm.be.", TTL(43200)),
 
   // Fastmail - https://www.fastmail.help/hc/en-us/articles/1500000280261
   MX("@", 10, "in1-smtp.messagingengine.com."),
