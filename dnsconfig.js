@@ -54,10 +54,8 @@ D(
 
   CNAME("buildings", "grb.byteless.net.", TTL(43200)),
   CNAME("community", "jbelien.github.io.", TTL(43200)),
-  CNAME("crab-import", "aptum.bitless.be.", TTL(43200)),
   CNAME("cyclofix", "osmbe.github.io.", TTL(43200)),
   CNAME("historical", "osmbe.github.io.", TTL(43200)),
-  CNAME("icar-import", "aptum.bitless.be.", TTL(43200)),
   CNAME("jekyll", "osmbe.github.io.", TTL(43200)),
   CNAME("mapcomplete", "mapcomplete.github.io.", TTL(43200)),
   CNAME("play", "osmbe.github.io.", TTL(43200)),
