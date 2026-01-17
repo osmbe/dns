@@ -19,7 +19,7 @@ D(
   A("@", "185.199.111.153"), // GitHub Pages
 
   CNAME("tile", "tile.osm.be.", TTL(43200)),
-  CNAME("www", "web.fastmail.com.", TTL(43200)),
+  CNAME("www", "docker.osm.be.", TTL(43200)), // Redirection
 
   // Fastmail - https://www.fastmail.help/hc/en-us/articles/1500000280261
   MX("@", 10, "in1-smtp.messagingengine.com."),
@@ -41,8 +41,7 @@ D(
 
   DefaultTTL(3600),
 
-  A("@", "103.168.172.37"),
-  A("@", "103.168.172.52"),
+  A("@", "146.190.224.8"), // Redirection via docker.osm.be
 
   A("docker", "146.190.224.8"),
   A("tile", "142.93.238.240"),
@@ -53,12 +52,11 @@ D(
   CNAME("community", "jbelien.github.io.", TTL(43200)),
   CNAME("cyclofix", "osmbe.github.io.", TTL(43200)),
   CNAME("historical", "osmbe.github.io.", TTL(43200)),
-  CNAME("jekyll", "osmbe.github.io.", TTL(43200)),
+  // CNAME("jekyll", "osmbe.github.io.", TTL(43200)),
   CNAME("mapcomplete", "mapcomplete.github.io.", TTL(43200)),
   CNAME("play", "osmbe.github.io.", TTL(43200)),
   CNAME("report", "jbelien.github.io.", TTL(43200)),
   CNAME("welcome", "2-x-rai4ihq-b62c5e7ddypzg.fr-3.platformsh.site.", TTL(43200)),
-  CNAME("www", "web.fastmail.com.", TTL(43200)),
 
   CNAME("mailing", "docker.osm.be.", TTL(43200)),
   CNAME("new.buildings", "docker.osm.be.", TTL(43200)),
@@ -68,6 +66,7 @@ D(
 
   // Redirections
   CNAME("members", "docker.osm.be.", TTL(43200)),
+  CNAME("www", "docker.osm.be.", TTL(43200)),
 
   // Fastmail - https://www.fastmail.help/hc/en-us/articles/1500000280261
   MX("@", 10, "in1-smtp.messagingengine.com."),
