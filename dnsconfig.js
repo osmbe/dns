@@ -49,9 +49,6 @@ D(
 
   A("hiking", "79.99.201.128"),
 
-  CNAME("status", "page.updown.io.", TTL(43200)),
-  TXT("_updown.status", "updown-page=p/le98d"),
-
   CNAME("buildings", "grb.byteless.net.", TTL(43200)),
   CNAME("community", "jbelien.github.io.", TTL(43200)),
   CNAME("cyclofix", "osmbe.github.io.", TTL(43200)),
@@ -66,6 +63,7 @@ D(
   CNAME("mailing", "docker.osm.be.", TTL(43200)),
   CNAME("new.buildings", "docker.osm.be.", TTL(43200)),
   CNAME("proxy", "docker.osm.be.", TTL(43200)),
+  CNAME("status", "docker.osm.be.", TTL(43200)),
   CNAME("uptime", "docker.osm.be.", TTL(43200)),
 
   // Redirections
