@@ -58,11 +58,11 @@ D(
   CNAME("report", "jbelien.github.io.", TTL(43200)),
   CNAME("welcome", "2-x-rai4ihq-b62c5e7ddypzg.fr-3.platformsh.site.", TTL(43200)),
 
-  CNAME("mailing", "docker.osm.be.", TTL(43200)),
   CNAME("new.buildings", "docker.osm.be.", TTL(43200)),
   CNAME("proxy", "docker.osm.be.", TTL(43200)),
   CNAME("status", "docker.osm.be.", TTL(43200)),
   CNAME("uptime", "docker.osm.be.", TTL(43200)),
+  CNAME("vault", "docker.osm.be.", TTL(43200)),
 
   // Redirections
   CNAME("members", "docker.osm.be.", TTL(43200)),
