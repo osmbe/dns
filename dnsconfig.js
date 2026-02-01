@@ -41,10 +41,9 @@ D(
 
   DefaultTTL(3600),
 
-  A("@", "91.214.191.54"), // Redirection via docker.osm.be
+  A("@", "91.214.191.54"), // Redirection via containers.osm.be
 
   A("containers", "91.214.191.54"),
-  A("docker", "146.190.224.8"),
   A("tile", "142.93.238.240"),
 
   A("hiking", "79.99.201.128"),
@@ -60,10 +59,10 @@ D(
   CNAME("welcome", "2-x-rai4ihq-b62c5e7ddypzg.fr-3.platformsh.site.", TTL(43200)),
 
   CNAME("new.buildings", "containers.osm.be.", TTL(43200)),
-  CNAME("proxy", "docker.osm.be.", TTL(43200)),
-  CNAME("status", "docker.osm.be.", TTL(43200)),
-  CNAME("uptime", "docker.osm.be.", TTL(43200)),
-  // CNAME("vault", "docker.osm.be.", TTL(43200)),
+  CNAME("proxy", "containers.osm.be.", TTL(43200)),
+  CNAME("status", "containers.osm.be.", TTL(43200)),
+  CNAME("uptime", "containers.osm.be.", TTL(43200)),
+  // CNAME("vault", "containers.osm.be.", TTL(43200)),
 
   // Redirections
   CNAME("members", "containers.osm.be.", TTL(43200)),
