@@ -41,7 +41,7 @@ D(
 
   DefaultTTL(3600),
 
-  A("@", "146.190.224.8"), // Redirection via docker.osm.be
+  A("@", "91.214.191.54"), // Redirection via docker.osm.be
 
   A("containers", "91.214.191.54"),
   A("docker", "146.190.224.8"),
