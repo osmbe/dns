@@ -51,7 +51,7 @@ D(
   A("panoramax", "178.104.206.79"),
   AAAA("panoramax", "2a01:4f8:c0c:59e0::1"),
   A("images.panoramax", "85.9.216.248"),
-  AAAA("images.panoramax", "2a04:3544:1000:1510:c8e9:93ff:fe31:65d3")
+  AAAA("images.panoramax", "2a04:3544:1000:1510:c8e9:93ff:fe31:65d3"),
 
   CNAME("buildings", "grb.byteless.net.", TTL(43200)),
   CNAME("community", "jbelien.github.io.", TTL(43200)),
@@ -88,5 +88,5 @@ D(
   TXT("_github-pages-challenge-osmbe", "c014dd962f7ee4f0223cfb30c1755c"),
   TXT("_github-pages-challenge-jbelien.report", "dee80906a3559de895b1763b79cd8d"),
   TXT("_github-pages-challenge-jbelien.community", "3fbf8f6a3952111acd1fe1f65511a0"),
-  TXT("_github-pages-challenge-mapcomplete.mapcomplete", "abc032979de3caa4ba4743f791c411"),
+  TXT("_github-pages-challenge-mapcomplete.mapcomplete", "abc032979de3caa4ba4743f791c411")
 );
