@@ -30,7 +30,12 @@ D(
   CNAME("fm3._domainkey", "fm3.openstreetmap.be.dkim.fmhosted.com."),
 
   TXT("_github-challenge-osmbe", "43d1e54aa1"),
-  TXT("_github-pages-challenge-osmbe", "97d20329e5ae4b3afae295f72515dd")
+  TXT("_github-pages-challenge-osmbe", "97d20329e5ae4b3afae295f72515dd"),
+
+  A("panoramax", "178.104.206.79"),
+  AAAA("panoramax", "2a01:4f8:c0c:59e0::1"),
+  A("images.panoramax", "85.9.216.248"),
+  AAAA("images.panoramax", "2a04:3544:1000:1510:c8e9:93ff:fe31:65d3")
 );
 
 D(
