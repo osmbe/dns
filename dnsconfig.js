@@ -48,10 +48,10 @@ D(
 
   A("hiking", "79.99.201.128"),
 
-  A("panoramax", "178.104.206.79"),
-  AAAA("panoramax", "2a01:4f8:c0c:59e0::1"),
-  A("images.panoramax", "85.9.216.248"),
-  AAAA("images.panoramax", "2a04:3544:1000:1510:c8e9:93ff:fe31:65d3"),
+  A("panoramax", "83.228.220.174"),
+  AAAA("panoramax", "2001:1600:18:203::1d"),
+  A("images.panoramax", "83.228.220.174"),
+  AAAA("images.panoramax", "2001:1600:18:203::1d"),
 
   CNAME("buildings", "grb.byteless.net.", TTL(43200)),
   CNAME("community", "jbelien.github.io.", TTL(43200)),
