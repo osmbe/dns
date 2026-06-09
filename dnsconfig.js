@@ -64,6 +64,7 @@ D(
   CNAME("welcome", "2-x-rai4ihq-b62c5e7ddypzg.fr-3.platformsh.site.", TTL(43200)),
 
   CNAME("new.buildings", "containers.osm.be.", TTL(43200)),
+  CNAME("new.welcome", "containers.osm.be.", TTL(43200)),
   CNAME("proxy", "containers.osm.be.", TTL(43200)),
   CNAME("status", "containers.osm.be.", TTL(43200)),
   CNAME("uptime", "containers.osm.be.", TTL(43200)),
