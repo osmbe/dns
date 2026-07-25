@@ -44,6 +44,7 @@ D(
   A("@", "91.214.191.54"), // Redirection via containers.osm.be
 
   A("containers", "91.214.191.54"),
+  AAAA("containers", "2001:1600:13:101::1a48"),
   A("tile", "142.93.238.240"),
 
   A("hiking", "79.99.201.128"),
