@@ -1,7 +1,7 @@
 // Providers:
 
 var REG_NONE = NewRegistrar("none"); // No registrar.
-var DSP_DIGITALOCEAN = NewDnsProvider("digitalocean");
+var DSP_INFOMANIAK = NewDnsProvider("infomaniak");
 
 // Domains:
 
@@ -9,7 +9,7 @@ D(
   "openstreetmap.be",
 
   REG_NONE,
-  DnsProvider(DSP_DIGITALOCEAN),
+  DnsProvider(DSP_INFOMANIAK),
 
   DefaultTTL(3600),
 
@@ -37,7 +37,7 @@ D(
   "osm.be",
 
   REG_NONE,
-  DnsProvider(DSP_DIGITALOCEAN),
+  DnsProvider(DSP_INFOMANIAK),
 
   DefaultTTL(3600),
 

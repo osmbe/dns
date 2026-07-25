@@ -15,21 +15,21 @@ jobs:
       - name: DNSControl check
         run: dnscontrol check
 
-  check-creds:
-    runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        provider: [digitalocean]
-    steps:
-      - uses: actions/checkout@v7
-      - uses: gacts/install-dnscontrol@v1
-      - name: DNSControl check-creds
-        run: dnscontrol check-creds ${{ matrix.provider }}
-        env:
-          TOKEN_DIGITALOCEAN: ${{ secrets.TOKEN_DIGITALOCEAN }}
+  # check-creds:
+  #   runs-on: ubuntu-latest
+  #   strategy:
+  #     matrix:
+  #       provider: [digitalocean]
+  #   steps:
+  #     - uses: actions/checkout@v7
+  #     - uses: gacts/install-dnscontrol@v1
+  #     - name: DNSControl check-creds
+  #       run: dnscontrol check-creds ${{ matrix.provider }}
+  #       env:
+  #         TOKEN_INFOMANIAK: ${{ secrets.TOKEN_INFOMANIAK }}
 
   preview:
-    needs: [check, check-creds]
+    needs: [check]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7
@@ -37,7 +37,7 @@ jobs:
       - name: DNSControl preview
         run: dnscontrol preview
         env:
-          TOKEN_DIGITALOCEAN: ${{ secrets.TOKEN_DIGITALOCEAN }}
+          TOKEN_INFOMANIAK: ${{ secrets.TOKEN_INFOMANIAK }}
 
   push:
     if: github.event_name == 'push'
@@ -53,4 +53,4 @@ jobs:
       - name: DNSControl push
         run: dnscontrol push
         env:
-          TOKEN_DIGITALOCEAN: ${{ secrets.TOKEN_DIGITALOCEAN }}
+          TOKEN_INFOMANIAK: ${{ secrets.TOKEN_INFOMANIAK }}

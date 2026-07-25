@@ -2,8 +2,8 @@
   "bind": {
     "TYPE": "BIND"
   },
-  "digitalocean": {
-    "TYPE": "DIGITALOCEAN",
-    "token": "$TOKEN_DIGITALOCEAN"
+  "infomaniak": {
+    "TYPE": "INFOMANIAK",
+    "token": "$TOKEN_INFOMANIAK"
   }
 }
