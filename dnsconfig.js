@@ -22,8 +22,9 @@ D(
   AAAA("@", "2606:50c0:8002::153"), // GitHub Pages
   AAAA("@", "2606:50c0:8003::153"), // GitHub Pages
 
+  CNAME("www", "openstreetmap.be."),
+
   CNAME("tile", "tile.osm.be.", TTL(43200)),
-  CNAME("www", "containers.osm.be.", TTL(43200)), // Redirection
 
   // Fastmail - https://www.fastmail.help/hc/en-us/articles/1500000280261
   MX("@", 10, "in1-smtp.messagingengine.com."),
