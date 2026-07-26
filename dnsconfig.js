@@ -17,6 +17,10 @@ D(
   A("@", "185.199.109.153"), // GitHub Pages
   A("@", "185.199.110.153"), // GitHub Pages
   A("@", "185.199.111.153"), // GitHub Pages
+  AAAA("@", "2606:50c0:8000::153"), // GitHub Pages
+  AAAA("@", "2606:50c0:8001::153"), // GitHub Pages
+  AAAA("@", "2606:50c0:8002::153"), // GitHub Pages
+  AAAA("@", "2606:50c0:8003::153"), // GitHub Pages
 
   CNAME("tile", "tile.osm.be.", TTL(43200)),
   CNAME("www", "containers.osm.be.", TTL(43200)), // Redirection
