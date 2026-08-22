@@ -22,7 +22,7 @@ D(
   AAAA("@", "2606:50c0:8002::153"), // GitHub Pages
   AAAA("@", "2606:50c0:8003::153"), // GitHub Pages
 
-  CNAME("www", "openstreetmap.be."),
+  CNAME("www", "containers.osm.be."),
 
   CNAME("tile", "tile.osm.be.", TTL(43200)),
 
