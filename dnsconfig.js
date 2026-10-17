@@ -82,13 +82,14 @@ D(
   // Fastmail - https://www.fastmail.help/hc/en-us/articles/1500000280261
   MX("@", 10, "in1-smtp.messagingengine.com."),
   MX("@", 20, "in2-smtp.messagingengine.com."),
-  TXT("@", "v=spf1 include:spf.messagingengine.com include:_spf.google.com ?all"),
+  TXT("@", "v=spf1 include:spf.messagingengine.com include:_spf.tem.scaleway.com include:_spf.google.com ?all"),
   TXT("_dmarc", "v=DMARC1; p=none;"),
   CNAME("fm1._domainkey", "fm1.osm.be.dkim.fmhosted.com."),
   CNAME("fm2._domainkey", "fm2.osm.be.dkim.fmhosted.com."),
   CNAME("fm3._domainkey", "fm3.osm.be.dkim.fmhosted.com."),
   CNAME("k2._domainkey", "dkim2.mcsv.net."),
   CNAME("k3._domainkey", "dkim3.mcsv.net."),
+  CNAME("cfa73439-877f-4af4-85e8-877082f1b9f0._domainkey", "v=DKIM1; h=sha256; k=rsa; p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAxkrA+BDFXfEu1zJxpSdCU+AoLF7NQFgFn9CEhh5XdsqyOcHuYxOmKoa1rsdAalkEc0fbnFt/dvKMRNaI/29NptSzuCwBLDZ3cINAyo1uFpsqxQP/YUQs8JbciyFadxzS1W3v6SbJZiQU6O50AR4xWWTqnuj9eRBC3gR5hjGyylpYaRQg9oIZG1wiPizauaiOVWlObCNDUU9tweDlO0nesYhBPtzrKGpHKTYoRE+JHN6wZh81c0SpB88jto0nxx96QHwHkT8s+nXmZRhEU4bGtFvRJWqDNbHURA0mQD8RXhy2vmnhvbEIwuONKn5x6hy78kxUNQz9BycL9+O6/R+zUQIDAQAB");
 
   TXT("_github-challenge-osmbe", "0929d6a96c"),
   TXT("_github-pages-challenge-osmbe", "c014dd962f7ee4f0223cfb30c1755c"),
