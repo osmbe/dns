@@ -68,12 +68,11 @@ D(
   CNAME("play", "osmbe.github.io.", TTL(43200)),
   CNAME("report", "jbelien.github.io.", TTL(43200)),
 
+  CNAME("listmonk", "containers.osm.be.", TTL(43200)),
   CNAME("new.buildings", "containers.osm.be.", TTL(43200)),
-  CNAME("new.welcome", "containers.osm.be.", TTL(43200)),
   CNAME("proxy", "containers.osm.be.", TTL(43200)),
   CNAME("status", "containers.osm.be.", TTL(43200)),
   CNAME("uptime", "containers.osm.be.", TTL(43200)),
-  // CNAME("vault", "containers.osm.be.", TTL(43200)),
   CNAME("welcome", "containers.osm.be.", TTL(43200)),
 
   // Redirections
