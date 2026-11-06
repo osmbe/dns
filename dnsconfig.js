@@ -80,11 +80,14 @@ D(
   CNAME("www", "containers.osm.be.", TTL(43200)),
 
   // Fastmail - https://www.fastmail.help/hc/en-us/articles/1500000280261
+  // Mailjet - https://documentation.mailjet.com/hc/en-us/articles/360049641733-Authenticating-Domains-with-SPF-and-DKIM-A-Complete-Guide
+  // Scaleway - https://www.scaleway.com/en/docs/transactional-email/how-to/authenticate-domain/
   MX("@", 10, "in1-smtp.messagingengine.com."),
   MX("@", 20, "in2-smtp.messagingengine.com."),
-  TXT("@", "v=spf1 include:spf.messagingengine.com include:_spf.tem.scaleway.com include:_spf.google.com ?all"),
+  TXT("@", "v=spf1 include:spf.messagingengine.com include:spf.mailjet.com include:_spf.tem.scaleway.com include:_spf.google.com ~all"),
   TXT("_dmarc", "v=DMARC1; p=none;"),
   TXT("cfa73439-877f-4af4-85e8-877082f1b9f0._domainkey", "v=DKIM1; h=sha256; k=rsa; p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAxkrA+BDFXfEu1zJxpSdCU+AoLF7NQFgFn9CEhh5XdsqyOcHuYxOmKoa1rsdAalkEc0fbnFt/dvKMRNaI/29NptSzuCwBLDZ3cINAyo1uFpsqxQP/YUQs8JbciyFadxzS1W3v6SbJZiQU6O50AR4xWWTqnuj9eRBC3gR5hjGyylpYaRQg9oIZG1wiPizauaiOVWlObCNDUU9tweDlO0nesYhBPtzrKGpHKTYoRE+JHN6wZh81c0SpB88jto0nxx96QHwHkT8s+nXmZRhEU4bGtFvRJWqDNbHURA0mQD8RXhy2vmnhvbEIwuONKn5x6hy78kxUNQz9BycL9+O6/R+zUQIDAQAB"),
+  TXT("mailjet._domainkey", "k=rsa; p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAtjMDwl05qMu+oRFhoDOrNPbbot/VnldM/Yc/8Oo+XkBzNZifaeuEY8q3PvhhJkG7bSnlVxb0tgr5G8Orme8mi6CES0QrqlniY2T78It4EzZuG47+5k7rahi9AaWPJxQSl64LtzM6Ijr8AUf7EeOjv7s0qFvvbzo00NKZWlvygMwDSXaU1sV2Ci6ZaXflE1KFnu20ZR4XOuAfz8pak8megMQPzQiulCnkuVqxl59GaZOLLfnXeBZnz4ewCcuSZhyVMq+2NsBXza9wQUv1NVwpOzqszx3yt1vM1isS6OcNBNzVtQea+RnBixy1dHoZLkzZDixUjaPdZiizPeBmd/CHHwIDAQAB"),
   CNAME("fm1._domainkey", "fm1.osm.be.dkim.fmhosted.com."),
   CNAME("fm2._domainkey", "fm2.osm.be.dkim.fmhosted.com."),
   CNAME("fm3._domainkey", "fm3.osm.be.dkim.fmhosted.com."),
